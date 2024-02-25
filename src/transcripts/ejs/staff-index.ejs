@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transcript List - Staff</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      background-color: #121212; /* Karanlık arka plan rengi */
+      color: #fff; /* Beyaz metin rengi */
+    }
+
+    .container {
+      max-width: 600px;
+      margin-top: 50px;
+      background-color: #333; /* Hafif karanlık gri arka plan rengi */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .transcript-link {
+      display: block;
+      text-decoration: none;
+      color: #ccc; /* Açık gri bağlantı rengi */
+      padding: 10px;
+      border-bottom: 1px solid #555; /* Daha koyu gri border */
+      transition: background-color 0.3s ease;
+    }
+
+    .transcript-link:hover {
+      background-color: #444; /* Daha koyu gri hover arka plan rengi */
+    }
+
+    p {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>Transcript List - Staff</h1>
+      <% if (filtresiz.length === 0) { %>
+      <p>No transcripts found.</p>
+      <% } else { %>
+      <% for (var i = 0; i < filtresiz.length; i++) { %>
+      <a class="transcript-link" href="<%= userID[i] %>/<%= filtresiz[i].replace(".ejs", "") %>"><%= username[i] %> transcript recorded on <%= tarihler[i] %> at <%= saatler[i] %></a>
+      <% } %>
+      <% } %>
+    </div>
+  </body>
+</html>
