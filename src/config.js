@@ -4,4 +4,5 @@ module.exports = {
   token: "",
   guildID: "",
   url: "http://localhost/", // ex: https://ticketbot.com/
+  clientSecret: "" 
 };
