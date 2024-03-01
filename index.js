@@ -119,8 +119,8 @@ passport.deserializeUser((obj, done) => done(null, obj));
 passport.use(
   new Strategy(
     {
-      clientID: "761182128049225748",
-      clientSecret: "Gr9nUtkZSrkZcIsaOoOAoN0UQbCseuBz",
+      clientID: "BOT ID",
+      clientSecret: "",
       callbackURL: "http://localhost:80/callback",
       scope: ["identify", "guilds"],
     },
@@ -246,7 +246,7 @@ app.get("/", checkAuth, (req, res) => {
             const userid = userID;
             const username =
               client.guilds.cache.get(config.guildID).members.cache.get(userid)
-                .user.globalName || null;
+                ?.user?.globalName || null;
             UserNameArray.push(username);
             userIDArray.push(userid);
             tarihler.push(tarih);
