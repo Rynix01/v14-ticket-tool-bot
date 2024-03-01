@@ -39,6 +39,7 @@ This README provides an overview of the ticket bot setup and usage instructions.
 
 - The bot is equipped with a web-based transcript system.
 - Transcripts can be accessed via the provided URL in the `config.js` file.
+- Don't forget to add http://localhost:80/callback (your website url) to the redirects section on the oauth page of the bot panel.
 
 ## Contributing
 
