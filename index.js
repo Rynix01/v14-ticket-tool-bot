@@ -119,8 +119,8 @@ passport.deserializeUser((obj, done) => done(null, obj));
 passport.use(
   new Strategy(
     {
-      clientID: "BOT ID",
-      clientSecret: "",
+      clientID: client.user.id,
+      clientSecret: config.clientSecret,
       callbackURL: "http://localhost:80/callback",
       scope: ["identify", "guilds"],
     },
