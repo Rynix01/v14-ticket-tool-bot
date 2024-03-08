@@ -97,7 +97,7 @@ module.exports = {
         role: role.id,
         emoji: emoji,
         ticketName: ticketName,
-        transcriptChannel: interaction.options.getChannel("transcript-channel"),
+        transcriptChannel: interaction.options.getChannel("transcript-channel").id,
       });
 
       if (ticketName === "number") {
