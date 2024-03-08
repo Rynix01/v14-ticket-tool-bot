@@ -42,7 +42,7 @@ module.exports = {
     .addRoleOption((option) =>
       option
         .setName("role")
-        .setDescription("The role to ping when a ticket is created!")
+        .setDescription("The role to ping when a ticket is created! (staff role)")
         .setRequired(true)
     )
     .addStringOption((option) =>
