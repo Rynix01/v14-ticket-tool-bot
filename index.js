@@ -105,7 +105,7 @@ const path = require("path");
 
 app.set("views", path.join(__dirname, "src/transcripts/ejs"));
 
-callbackUrl = `http://localhost:80/callback`;
+callbackUrl = `${config.url}callback`;
 
 const passport = require("passport");
 const Strategy = require("passport-discord").Strategy;
@@ -121,7 +121,7 @@ passport.use(
     {
       clientID: config.botId,
       clientSecret: config.clientSecret,
-      callbackURL: "http://localhost:80/callback",
+      callbackURL: `${config.url}callback`,
       scope: ["identify", "guilds"],
     },
     (accessToken, refreshToken, profile, done) => {
